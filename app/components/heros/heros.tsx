@@ -1,8 +1,10 @@
 import Image from 'next/image'
 export default function Heros(){
     return <div>
-     <Image src="/quiz.png" height="40"
-        width="40" alt=""/>
+        <div>
+     <Image src="/quiz.png" height="250"
+        width="250" alt=""/>
+        </div>
      <div>
      <h1>QUIZ WORLD</h1>
      <p>This app is built to encourage and enlighten you about different fields of study.
