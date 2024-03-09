@@ -1,57 +1,66 @@
 interface IListQuestion {
   question: string;
-  "option a": string;
-  "option b": string;
-  "option c": string;
-  answerindex: string;
+  optionA: string;
+  optionB: string;
+  optionC: string;
+  answerIndex: number;
+  category: "Art"| "Science"| "Social";
+
 }
 
-const listQuestion: IListQuestion[] = [
+export const ListQuestion: IListQuestion[] = [
   {
     question: "What is the full meaning of ECOWAS",
-    "option a": "Economic Community of West African States.",
-    "option b": "Economics Countries of West Africa Countries.",
-    "option c": "Economy Commiunties of West African Countries.",
-    answerindex: "a",
+    optionA: "Economic Community of West African States.",
+    optionB: "Economics Countries of West Africa Countries.",
+    optionC: "Economy Commiunties of West African Countries.",
+    answerIndex: 1,
+    category: "Art",
+    
   },
 
   {
     question: "Add 23 and 2",
-    "option a": "29",
-    "option b": "34",
-    "option c": "25",
-    answerindex: "c",
+    optionA: "29",
+    optionB: "34",
+    optionC: "25",
+    answerIndex: 3,
+    category: "Art",
   },
 
   {
     question: "What is the full meaning of v",
-    "option a": "jiy",
-    "option b": "vivian",
-    "option c": "cow",
-    answerindex: "b",
+    optionA: "jiy",
+    optionB: "vivian",
+    optionC: "cow",
+    answerIndex: 2,
+    category: "Science",
   },
 
   {
     question: "What is the my name",
-    "option a": "precios",
-    "option b": "nnebugor",
-    "option c": "go",
-    answerindex: "b",
+    optionA: "precios",
+    optionB: "nnebugor",
+    optionC: "go",
+    answerIndex: 2,
+    category: "Science",
   },
 
   {
     question: "What is the full meaning of GOAT",
-    "option a": "Greatest Of Them All",
-    "option b": "food",
-    "option c": "come",
-    answerindex: "a",
+    optionA: "Greatest Of Them All",
+    optionB: "food",
+    optionC: "come",
+    answerIndex: 1,
+    category: "Social",
   },
 
   {
     question: "What is the full meaning of ECOWAS",
-    "option a": "string",
-    "option b": "number",
-    "option c": "yes",
-    answerindex: "a",
+    optionA: "string",
+    optionB: "number",
+    optionC: "yes",
+    answerIndex: 2,
+    category: "Social",
   },
 ];
