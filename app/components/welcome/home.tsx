@@ -6,6 +6,6 @@ export default function Beginner() {
     return <div>
         <Navbar/>
         <Heros/>
-        <Footer/>
+        
     </div>
 }

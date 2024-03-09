@@ -1,13 +1,13 @@
 import Image from "next/image";
-import style from "./nav.module.scss"
+
 
 export default function Navbar() {
   return (
-    <div className={style.logo}>
+    <div style={{display: "flex", alignItems: "center", justifyContent: "left", padding:"5px"}}>
       <p>
       <Image src="/logo 1.png" height="50" width="50" alt="logo" />
       </p>
-      Buz <span>World</span>
+      Buz <span style={{color:"rgb(123,186,29"}}>World</span>
     </div>
   );
 }
