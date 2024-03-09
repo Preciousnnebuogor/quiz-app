@@ -20,7 +20,7 @@ export default function Heros() {
           study. <br /> Click the button below to start your quiz.
         </p>
       </div>
-      <button className={style.button} onClick={() => router.push("category")}>
+      <button className={style.button} onClick={() => router.push("/category")}>
         Start
       </button>
     </div>

@@ -11,10 +11,11 @@ export default function Section() {
         <span style={{fontWeight: "bolder"}}>Success</span>
       </p>
       <div className={style.click}>
+
         <button>Art</button>
-        <br/>
+        
         <button>SCIENCE</button>
-        <br/>
+        
         <button>SOCIAL-SCIENCE</button>
       </div>
     </div>
