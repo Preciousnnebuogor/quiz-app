@@ -1,29 +1,53 @@
+"use client";
+import { useState } from "react";
 import { ListQuestion } from "./data";
+import style from "./question.module.scss";
+import { useSearchParams } from "next/navigation";
+
 export default function Question() {
+  const params = useSearchParams();
+  console.log(params.get("category"));
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [correctAnswer, setCorrectAnswer] = useState(0);
+
+  const newList = ListQuestion.filter((items, index) => {});
+
+  const nextClick = () => {
+    setQuestionIndex(questionIndex + 1);
+  };
+
+  const previousClick = () => {
+    if (questionIndex == 0) {
+      return;
+    }
+    setQuestionIndex(questionIndex - 1);
+  };
+
   return (
-    <div>
-      <div>
-        <p>What is the meaning of ECOWAS</p>
-        <h1>
-          a. Economic Community of West African States. <br />
-          b. Economics Countries of West Africa Countries. <br />
-          c. Economy Commiunties of West African Countries.
-        </h1>
+    <div className={style.layout}>
+      <div className={style.questionSection}>
+        {newList.map((list, index) => {
+          if (questionIndex == index) {
+            return (
+              <div key={index} className={style.questionDiv}>
+                <p>{list.question}</p>
+                <p>a. {list.optionA}</p>
+                <p>b. {list.optionB}</p>
+                <p>c. {list.optionC}</p>
+              </div>
+            );
+          } else {
+            return <div></div>;
+          }
+        })}
       </div>
+
       <div>
-        <button>Next</button>
+        <div>
+          <button onClick={nextClick}>Next</button>
+          <button onClick={previousClick}>Previous</button>
+        </div>
       </div>
-      {ListQuestion.map((list, index) => {
-        return (
-          <div key={index}>
-            <p>{list.question}</p>
-            <p>{list.optionA}</p>
-            <p>{list.optionB}</p>
-            <p>{list.optionC}</p>
-          </div>
-        );
-      })}
-      <div></div>
     </div>
   );
 }

@@ -1,6 +1,10 @@
 "use client";
-import style from "./category.module.scss"
+import Link from "next/link";
+import style from "./category.module.scss";
+import { useRouter } from "next/navigation";
+
 export default function Section() {
+  const router = useRouter();
   return (
     <div className={style.home}>
       <p>
@@ -8,15 +12,20 @@ export default function Section() {
         section you click.
         <br />
         Click on the section you want and start your quiz. <br />
-        <span style={{fontWeight: "bolder"}}>Success</span>
+        <span style={{ fontWeight: "bolder" }}>Success</span>
       </p>
       <div className={style.click}>
+        <Link href={{ pathname: "/aquestion", query: { category: "Art" } }}>
+          Art
+        </Link>
 
-        <button>Art</button>
-        
-        <button>SCIENCE</button>
-        
-        <button>SOCIAL-SCIENCE</button>
+        <Link href={{ pathname: "/aquestion", query: { category: "Science" } }}>
+          SCIENCE
+        </Link>
+
+        <Link href={{ pathname: "/aquestion", query: { category: "Social" } }}>
+          SOCIAL-SCIENCE
+        </Link>
       </div>
     </div>
   );
