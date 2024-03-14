@@ -14,8 +14,8 @@ export default function Question() {
   );
 
   const nextClick = () => {
-    if(newList.length == questionIndex +1) {
-      return
+    if (newList.length == questionIndex + 1) {
+      return;
     }
     setQuestionIndex(questionIndex + 1);
   };
@@ -26,17 +26,16 @@ export default function Question() {
     }
     setQuestionIndex(questionIndex - 1);
   };
-   
-  
 
   return (
-    
     <div className={style.layout}>
+      <p>
+        {questionIndex + 1} / {newList.length}
+      </p>
       <div className={style.questionSection}>
         {newList.map((list, index) => {
           if (questionIndex == index) {
             return (
-
               <div key={index} className={style.questionDiv}>
                 <p>{list.question}</p>
                 <p>a. {list.optionA}</p>
@@ -53,7 +52,11 @@ export default function Question() {
       <div>
         <div>
           <button onClick={nextClick}>Next</button>
-          <button onClick={previousClick}>Previous</button>
+          {questionIndex == 0 ? (
+            <div></div>
+          ) : (
+            <button onClick={previousClick}>Previous</button>
+          )}
         </div>
       </div>
     </div>
