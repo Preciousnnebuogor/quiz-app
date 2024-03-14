@@ -15,7 +15,7 @@ export default function Section() {
         <span style={{ fontWeight: "bolder" }}>Success</span>
       </p>
       <div className={style.click}>
-        <Link href={{ pathname: "/aquestion", query: { category: "Art" } }}>
+        <Link href={{ pathname: "/aquestion", query: { category: "HTML" } }}>
           Art
         </Link>
 

@@ -17,13 +17,13 @@
       margin-top: 50px;
 
       .selected {
-        background-color: aqua;
-        color: azure;
+        background-color: rgb(123, 186, 29);
+        color: black;
         cursor: pointer;
       }
       .unselected {
         background-color: transparent;
-        color: rgb(37, 28, 28);
+        color: black;
         padding: 10px 5px;
         cursor: pointer;
       }

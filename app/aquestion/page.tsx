@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { ListQuestion } from "./data";
 import style from "./question.module.scss";
 import { useSearchParams } from "next/navigation";
@@ -9,15 +9,16 @@ export default function QuestionPage() {
   const params = useSearchParams();
   const [questionIndex, setQuestionIndex] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(0);
-  const[isOptionVerify, setIsOptionVerify] = useState()
-
-
+  const [isOptionVerify, setIsOptionVerify] = useState(false);
 
   const newList = ListQuestion.filter(
     (item, index) => item.category === params.get("category")
   );
 
   const nextClick = () => {
+    if (!isOptionVerify) {
+      return;
+    }
     if (newList.length == questionIndex + 1) {
       return;
     }
@@ -40,7 +41,13 @@ export default function QuestionPage() {
       <div className={style.questionSection}>
         {newList.map((list, index) => {
           if (questionIndex == index) {
-            return <Question data={list} key={index} />;
+            return (
+              <Question
+                data={list}
+                key={index}
+                setIsVerify={setIsOptionVerify}
+              />
+            );
           } else {
             return <div></div>;
           }
