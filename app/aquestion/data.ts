@@ -1,4 +1,4 @@
-interface IListQuestion {
+export interface IListQuestion {
   question: string;
   optionA: string;
   optionB: string;

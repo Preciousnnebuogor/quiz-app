@@ -4,13 +4,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
+
+  .p {
+    width: 10%;
+  }
+
   .questionSection {
     margin-top: 30px;
     .questionDiv {
-      background-color: rgb(228, 70, 228);
+      word-spacing: 0cqb;
       margin-bottom: 50px;
       margin-top: 50px;
+
+      .selected {
+        background-color: aqua;
+        color: azure;
+        cursor: pointer;
+      }
+      .unselected {
+        background-color: transparent;
+        color: rgb(37, 28, 28);
+        padding: 10px 5px;
+        cursor: pointer;
+      }
     }
   }
 }

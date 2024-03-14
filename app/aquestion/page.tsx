@@ -3,11 +3,15 @@ import { useState } from "react";
 import { ListQuestion } from "./data";
 import style from "./question.module.scss";
 import { useSearchParams } from "next/navigation";
+import Question from "./question";
 
-export default function Question() {
+export default function QuestionPage() {
   const params = useSearchParams();
   const [questionIndex, setQuestionIndex] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(0);
+  const[isOptionVerify, setIsOptionVerify] = useState()
+
+
 
   const newList = ListQuestion.filter(
     (item, index) => item.category === params.get("category")
@@ -29,33 +33,50 @@ export default function Question() {
 
   return (
     <div className={style.layout}>
-      <p>
+      <p className={style.p}>
         {questionIndex + 1} / {newList.length}
       </p>
+
       <div className={style.questionSection}>
         {newList.map((list, index) => {
           if (questionIndex == index) {
-            return (
-              <div key={index} className={style.questionDiv}>
-                <p>{list.question}</p>
-                <p>a. {list.optionA}</p>
-                <p>b. {list.optionB}</p>
-                <p>c. {list.optionC}</p>
-              </div>
-            );
+            return <Question data={list} key={index} />;
           } else {
             return <div></div>;
           }
         })}
       </div>
 
-      <div>
+      <div className={style.buttons}>
         <div>
-          <button onClick={nextClick}>Next</button>
+          {questionIndex + 1 == newList.length ? (
+            <div></div>
+          ) : (
+            <button
+              onClick={nextClick}
+              style={{
+                paddingRight: "100px",
+                fontWeight: "bolder",
+                color: "rgb(123, 186, 29)",
+              }}
+            >
+              Next
+            </button>
+          )}
+
           {questionIndex == 0 ? (
             <div></div>
           ) : (
-            <button onClick={previousClick}>Previous</button>
+            <button
+              onClick={previousClick}
+              style={{
+                paddingLeft: "100px",
+                fontWeight: "bolder",
+                color: "rgb(123, 186, 29)",
+              }}
+            >
+              Previous
+            </button>
           )}
         </div>
       </div>
