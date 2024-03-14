@@ -16,7 +16,7 @@ export default function Section() {
       </p>
       <div className={style.click}>
         <Link href={{ pathname: "/aquestion", query: { category: "HTML" } }}>
-          Art
+          HTML
         </Link>
 
         <Link href={{ pathname: "/aquestion", query: { category: "Science" } }}>
