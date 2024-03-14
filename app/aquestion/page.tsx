@@ -6,13 +6,17 @@ import { useSearchParams } from "next/navigation";
 
 export default function Question() {
   const params = useSearchParams();
-  console.log(params.get("category"));
   const [questionIndex, setQuestionIndex] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(0);
 
-  const newList = ListQuestion.filter((items, index) => {});
+  const newList = ListQuestion.filter(
+    (item, index) => item.category === params.get("category")
+  );
 
   const nextClick = () => {
+    if(newList.length == questionIndex +1) {
+      return
+    }
     setQuestionIndex(questionIndex + 1);
   };
 
@@ -22,13 +26,17 @@ export default function Question() {
     }
     setQuestionIndex(questionIndex - 1);
   };
+   
+  
 
   return (
+    
     <div className={style.layout}>
       <div className={style.questionSection}>
         {newList.map((list, index) => {
           if (questionIndex == index) {
             return (
+
               <div key={index} className={style.questionDiv}>
                 <p>{list.question}</p>
                 <p>a. {list.optionA}</p>
