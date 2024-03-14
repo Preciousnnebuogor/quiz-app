@@ -4,7 +4,7 @@ export interface IListQuestion {
   optionB: string;
   optionC: string;
   answerIndex: number;
-  category: "HTML" | "Science" | "Social";
+  category: "HTML" | "CSS" | "Social";
 }
 
 export const ListQuestion: IListQuestion[] = [
@@ -222,94 +222,332 @@ export const ListQuestion: IListQuestion[] = [
     category: "HTML",
   },
 
-
   {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-
-  {
-    question: "How heading tags do we have in HTML?",
-    optionA: "6.",
-    optionB: "5.",
-    optionC: "3.",
-    answerIndex: 1,
-    category: "HTML",
-  },
-  
-  {
-    question: "What is the full meaning of GOAT",
-    optionA: "Greatest Of Them All",
-    optionB: "food",
-    optionC: "come",
-    answerIndex: 1,
-    category: "Social",
-  },
-
-  {
-    question: "What is the full meaning of ECOWAS",
-    optionA: "string",
-    optionB: "number",
-    optionC: "yes",
+    question:
+      "What is always a welcome page, and explains the purpose or topic of the site?",
+    optionA: "Beginningpage.",
+    optionB: "Homepage.",
+    optionC: "Titlepage.",
     answerIndex: 2,
-    category: "Social",
+    category: "HTML",
+  },
+
+  {
+    question: "Where do all items for the same website need to be saved?",
+    optionA: "In the same folder.",
+    optionB: "Where ever is fine.",
+    optionC: "Below the tags.",
+    answerIndex: 1,
+    category: "HTML",
+  },
+
+  {
+    question: "In HTML, how should values be consistently enclosed?",
+    optionA: "Parenthesis.",
+    optionB: "Quotation marks.",
+    optionC: "Commas.",
+    answerIndex: 2,
+    category: "HTML",
+  },
+
+  {
+    question:
+      "Which of the following is an example of an empty element in HTML?",
+    optionA: "</img>.",
+    optionB: "<img></img>.",
+    optionC: "<img/>.",
+    answerIndex: 3,
+    category: "HTML",
+  },
+
+  {
+    question:
+      "What is the term for an HTML element taht lacks a closing closing tag?",
+    optionA: "Empty element.",
+    optionB: "Tag.",
+    optionC: "Closed element.",
+    answerIndex: 1,
+    category: "HTML",
+  },
+
+  {
+    question:
+      "In which section or part of an HTML document is meta tag typically located?",
+    optionA: "The last page.",
+    optionB: "Any page.",
+    optionC: "The second page.",
+    answerIndex: 2,
+    category: "HTML",
+  },
+
+  {
+    question:
+      "<body/> Is this an opening tage or a closing tag in HTML element?",
+    optionA: "Meta tag.",
+    optionB: "Opening tag.",
+    optionC: "Closing tag.",
+    answerIndex: 3,
+    category: "HTML",
+  },
+
+  {
+    question:
+      "<body> Is this an opening tage or a closing tag in HTML element?",
+    optionA: "Title tag.",
+    optionB: "Opening tag.",
+    optionC: "Closing tag.",
+    answerIndex: 2,
+    category: "HTML",
+  },
+
+  {
+    question: "<br/> What type of tag is this?",
+    optionA: "Break tag.",
+    optionB: "An opening tag.",
+    optionC: "A title tag.",
+    answerIndex: 1,
+    category: "HTML",
+  },
+
+  {
+    question: "Which of the following property sets the font size of text?",
+    optionA: "Font-text.",
+    optionB: "Font-size.",
+    optionC: "font-weight.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+
+  {
+    question: "Which of the following property sets the font face to be used for text?",
+    optionA: "Font-family.",
+    optionB: "Font-size.",
+    optionC: "Font-family.",
+    answerIndex: 1,
+    category: "CSS",
+  },
+  {
+    question: "Which of the property infiuences the horizontal alignment of element, making it 'float' toward the left or right margin?",
+    optionA: "Float-left.",
+    optionB: "Float.",
+    optionC: "Float-align.",
+    answerIndex: 3,
+    category: "CSS",
+  },
+  {
+    question: "Which of the following property is used to round a border corners?",
+    optionA: "Border-.",
+    optionB: "Border-radius.",
+    optionC: "Border-round.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 1,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "CSS",
   },
 ];

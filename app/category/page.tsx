@@ -19,8 +19,8 @@ export default function Section() {
           HTML
         </Link>
 
-        <Link href={{ pathname: "/aquestion", query: { category: "Science" } }}>
-          SCIENCE
+        <Link href={{ pathname: "/aquestion", query: { category: "CSS" } }}>
+          CSS
         </Link>
 
         <Link href={{ pathname: "/aquestion", query: { category: "Social" } }}>
