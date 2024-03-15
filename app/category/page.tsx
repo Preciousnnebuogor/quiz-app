@@ -23,8 +23,8 @@ export default function Section() {
           CSS
         </Link>
 
-        <Link href={{ pathname: "/aquestion", query: { category: "Social" } }}>
-          SOCIAL-SCIENCE
+        <Link href={{ pathname: "/aquestion", query: { category: "JAVASCRIPT" } }}>
+        JAVASCRIPT
         </Link>
       </div>
     </div>

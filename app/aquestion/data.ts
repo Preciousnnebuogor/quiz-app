@@ -4,7 +4,7 @@ export interface IListQuestion {
   optionB: string;
   optionC: string;
   answerIndex: number;
-  category: "HTML" | "CSS" | "Social";
+  category: "HTML" | "CSS" | "JAVASCRIPT";
 }
 
 export const ListQuestion: IListQuestion[] = [
@@ -549,5 +549,14 @@ export const ListQuestion: IListQuestion[] = [
     optionC: "yes.",
     answerIndex: 2,
     category: "CSS",
+  },
+
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "JAVASCRIPT",
   },
 ];

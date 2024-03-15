@@ -55,37 +55,31 @@ export default function QuestionPage() {
       </div>
 
       <div className={style.buttons}>
-        <div>
-          {questionIndex + 1 == newList.length ? (
-            <div></div>
-          ) : (
-            <button
-              onClick={nextClick}
-              style={{
-                paddingRight: "100px",
-                fontWeight: "bolder",
-                color: "rgb(123, 186, 29)",
-              }}
-            >
-              Next
-            </button>
-          )}
+        {questionIndex == 0 || (
+          <button
+            onClick={previousClick}
+            style={{
+              // paddingLeft: "100px",
+              fontWeight: "bolder",
+              color: "rgb(123, 186, 29)",
+            }}
+          >
+            Previous
+          </button>
+        )}
 
-          {questionIndex == 0 ? (
-            <div></div>
-          ) : (
-            <button
-              onClick={previousClick}
-              style={{
-                paddingLeft: "100px",
-                fontWeight: "bolder",
-                color: "rgb(123, 186, 29)",
-              }}
-            >
-              Previous
-            </button>
-          )}
-        </div>
+        {questionIndex + 1 == newList.length || (
+          <button
+            onClick={nextClick}
+            style={{
+              // paddingRight: "100px",
+              fontWeight: "bolder",
+              color: "rgb(123, 186, 29)",
+            }}
+          >
+            Next
+          </button>
+        )}
       </div>
     </div>
   );
