@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 export default function QuestionPage() {
   const router = useRouter();
   const params = useSearchParams();
+  const category = params.get("category");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState<number[]>([]);
   const [isOptionVerify, setIsOptionVerify] = useState({
@@ -17,7 +18,7 @@ export default function QuestionPage() {
   });
 
   const newList = ListQuestion.filter(
-    (item, index) => item.category === params.get("category")
+    (item, index) => item.category === category
   );
 
   const currentQuestion = ListQuestion.filter(
@@ -49,7 +50,33 @@ export default function QuestionPage() {
     if (!isOptionVerify.hasSelected) {
       return;
     }
-    router.push("/bresult", );
+    
+    const setForm = new Set(correctAnswers)
+    console.log(setForm)
+    console.log(setForm.size)
+
+    
+    const myObject = {
+        score: setForm.size,
+        totalQuestion: newList.length
+    }
+        
+ 
+    
+   
+
+    // Convert correctAnswers array to a set
+
+    // Get the length of the set
+
+    // add the length to the router
+
+    // - Pass result to the result page
+
+    // Pass total questions answered to the result page - newList.length
+    query: { data: JSON.stringify(myObject) }
+    router.push("/bresult")
+    ;
   };
 
   return (
