@@ -559,4 +559,20 @@ export const ListQuestion: IListQuestion[] = [
     answerIndex: 2,
     category: "JAVASCRIPT",
   },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "JAVASCRIPT",
+  },
+  {
+    question: "What is the full meaning of ECOWAS?",
+    optionA: "string.",
+    optionB: "number.",
+    optionC: "yes.",
+    answerIndex: 2,
+    category: "JAVASCRIPT",
+  },
 ];

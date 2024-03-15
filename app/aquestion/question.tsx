@@ -4,11 +4,19 @@ import style from "./question.module.scss";
 
 export default function Question(props: {
   data: IListQuestion;
-  setIsVerify: Dispatch<SetStateAction<boolean>>;
+  setIsVerify: Dispatch<
+    SetStateAction<{
+      hasSelected: boolean;
+      selectedAnsIndex: number;
+    }>
+  >;
 }) {
   const [selectedAnswer, setSelectedAnswer] = useState(0);
   useEffect(() => {
-    props.setIsVerify(false);
+    props.setIsVerify({
+      hasSelected: false,
+      selectedAnsIndex: 0,
+    });
   }, []);
 
   return (
@@ -26,7 +34,10 @@ export default function Question(props: {
         className={selectedAnswer == 1 ? style.selected : style.unselected}
         onClick={() => {
           setSelectedAnswer(1);
-          props.setIsVerify(true);
+          props.setIsVerify({
+            hasSelected: true,
+            selectedAnsIndex: 1,
+          });
         }}
       >
         a. {props.data.optionA}
@@ -36,7 +47,10 @@ export default function Question(props: {
         className={selectedAnswer == 2 ? style.selected : style.unselected}
         onClick={() => {
           setSelectedAnswer(2);
-          props.setIsVerify(true);
+          props.setIsVerify({
+            hasSelected: true,
+            selectedAnsIndex: 2,
+          });
         }}
       >
         b. {props.data.optionB}
@@ -46,7 +60,10 @@ export default function Question(props: {
         className={selectedAnswer == 3 ? style.selected : style.unselected}
         onClick={() => {
           setSelectedAnswer(3);
-          props.setIsVerify(true);
+          props.setIsVerify({
+            hasSelected: true,
+            selectedAnsIndex: 2,
+          });
         }}
       >
         c. {props.data.optionC}
