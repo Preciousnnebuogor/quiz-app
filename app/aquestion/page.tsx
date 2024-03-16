@@ -4,10 +4,13 @@ import { ListQuestion } from "./data";
 import style from "./question.module.scss";
 import { useSearchParams } from "next/navigation";
 import Question from "./question";
-import { useRouter } from "next/navigation";
+import { useRouter} from "next/router";
+
+
 
 export default function QuestionPage() {
   const router = useRouter();
+
   const params = useSearchParams();
   const category = params.get("category");
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -50,20 +53,15 @@ export default function QuestionPage() {
     if (!isOptionVerify.hasSelected) {
       return;
     }
-    
-    const setForm = new Set(correctAnswers)
-    console.log(setForm)
-    console.log(setForm.size)
 
-    
+    const setForm = new Set(correctAnswers);
+    console.log(setForm);
+    console.log(setForm.size);
+
     const myObject = {
-        score: setForm.size,
-        totalQuestion: newList.length
-    }
-        
- 
-    
-   
+      score: setForm.size,
+      totalQuestion: newList.length,
+    };
 
     // Convert correctAnswers array to a set
 
@@ -74,9 +72,11 @@ export default function QuestionPage() {
     // - Pass result to the result page
 
     // Pass total questions answered to the result page - newList.length
-    query: { data: JSON.stringify(myObject) }
-    router.push("/bresult")
-    ;
+    router.push( 
+      { pathname: "/bresult" },
+
+      { query: { data: JSON.stringify(myObject) } }
+    );
   };
 
   return (
