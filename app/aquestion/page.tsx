@@ -4,9 +4,7 @@ import { ListQuestion } from "./data";
 import style from "./question.module.scss";
 import { useSearchParams } from "next/navigation";
 import Question from "./question";
-import { useRouter} from "next/router";
-
-
+import { useRouter } from "next/navigation";
 
 export default function QuestionPage() {
   const router = useRouter();
@@ -70,13 +68,9 @@ export default function QuestionPage() {
     // add the length to the router
 
     // - Pass result to the result page
-
+    // setForm.size
     // Pass total questions answered to the result page - newList.length
-    router.push( 
-      { pathname: "/bresult" },
-
-      { query: { data: JSON.stringify(myObject) } }
-    );
+    router.push(`/bresult?score=${setForm.size}`);
   };
 
   return (
