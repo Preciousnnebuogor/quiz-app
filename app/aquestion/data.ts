@@ -556,7 +556,7 @@ export const ListQuestion: IListQuestion[] = [
     optionA: "string.",
     optionB: "number.",
     optionC: "yes.",
-    answerIndex: 2,
+    answerIndex: 3,
     category: "JAVASCRIPT",
   },
   {
@@ -564,7 +564,7 @@ export const ListQuestion: IListQuestion[] = [
     optionA: "string.",
     optionB: "number.",
     optionC: "yes.",
-    answerIndex: 2,
+    answerIndex: 1,
     category: "JAVASCRIPT",
   },
   {
@@ -572,7 +572,7 @@ export const ListQuestion: IListQuestion[] = [
     optionA: "string.",
     optionB: "number.",
     optionC: "yes.",
-    answerIndex: 2,
+    answerIndex: 1,
     category: "JAVASCRIPT",
   },
 ];

@@ -11,7 +11,7 @@ export default function Question(props: {
     }>
   >;
 }) {
-  const [selectedAnswer, setSelectedAnswer] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(1);
   useEffect(() => {
     props.setIsVerify({
       hasSelected: false,
@@ -38,6 +38,9 @@ export default function Question(props: {
             hasSelected: true,
             selectedAnsIndex: 1,
           });
+          console.log(
+            `Selected Ans${selectedAnswer} Q Ans:${props.data.answerIndex}`
+          );
         }}
       >
         a. {props.data.optionA}
@@ -47,10 +50,14 @@ export default function Question(props: {
         className={selectedAnswer == 2 ? style.selected : style.unselected}
         onClick={() => {
           setSelectedAnswer(2);
+
           props.setIsVerify({
             hasSelected: true,
             selectedAnsIndex: 2,
           });
+          console.log(
+            `Selected Ans${selectedAnswer} Q Ans:${props.data.answerIndex}`
+          );
         }}
       >
         b. {props.data.optionB}
@@ -59,11 +66,14 @@ export default function Question(props: {
       <p
         className={selectedAnswer == 3 ? style.selected : style.unselected}
         onClick={() => {
-          setSelectedAnswer(3);
+            setSelectedAnswer(3);
           props.setIsVerify({
             hasSelected: true,
-            selectedAnsIndex: 2,
+            selectedAnsIndex: 3,
           });
+          console.log(
+            `Selected Ans: ${selectedAnswer} Q Ans:${props.data.answerIndex}`
+          );
         }}
       >
         c. {props.data.optionC}

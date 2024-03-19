@@ -31,7 +31,7 @@ export default function QuestionPage() {
       return;
     }
     if (currentQuestion.answerIndex === isOptionVerify.selectedAnsIndex) {
-      setCorrectAnswers([...correctAnswers, isOptionVerify.selectedAnsIndex]);
+      setCorrectAnswers([...correctAnswers, questionIndex]);
     }
 
     if (newList.length == questionIndex + 1) {
@@ -52,8 +52,13 @@ export default function QuestionPage() {
       return;
     }
 
+    if (currentQuestion.answerIndex == isOptionVerify.selectedAnsIndex) {
+      setCorrectAnswers([...correctAnswers, questionIndex]);
+    }
+
     const setForm = new Set(correctAnswers);
-    console.log(setForm);
+    console.log("correctAnswers", correctAnswers);
+    console.log("setForm", setForm.size);
     console.log(setForm.size);
 
     const myObject = {
