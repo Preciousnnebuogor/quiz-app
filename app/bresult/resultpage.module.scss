@@ -1,8 +1,19 @@
-.button {
+.buttons {
   display: flex;
-
-  background-color: aquamarine;
-  
   align-items: center;
   justify-content: center;
+  width: 80%;
+  
+
+  .button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    margin-top: 15%;
+    font-weight: bolder;
+    padding-left: 20%;
+    color:rgb(123, 186, 29) ;
+        
+  }
 }
