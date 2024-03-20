@@ -1,5 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import style from "./resultpage.module.scss"
+
 
 export default function ResultPage() {
   const params = useSearchParams();
@@ -11,8 +13,10 @@ export default function ResultPage() {
               fontWeight: "bolder",
               color: "rgb(123, 186, 29)",
             }}>{score}</p>
+            <div className={style.button}>
       <button>Submit</button>
       <button>Cancel</button>
+      </div>
     </div>
   );
 }
