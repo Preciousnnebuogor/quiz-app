@@ -133,7 +133,7 @@ export default function QuestionPage() {
             style={{
               // paddingRight: "100px",
               fontWeight: "bolder",
-              color: "rgb(29, 162, 186)",
+              color: "rgb(13, 15, 16)",
             }}
           >
             Submit
