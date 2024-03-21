@@ -8,11 +8,6 @@ export default function ResultPage() {
   const params = useSearchParams();
   const score = params.get("score");
 
-  function showAlert() {
-    const myText = "Your answers has been submitted.Thanks for trying our app!";
-    alert(myText);
-  }
-
   return (
     <div className={style.home}>
       <p
@@ -26,18 +21,11 @@ export default function ResultPage() {
         {score}
       </p>
 
+      <h1>Congratulations for completing your quiz test!</h1>
+
       <div className={style.buttons}>
-        <button className={style.button} onClick={showAlert}>
-          Submit
-        </button>
-        <button
-          className={style.button}
-          onClick={() => {
-            router.push("/category");
-          }}
-        >
-          Cancel
-        </button>
+        <button>Submit</button>
+        <button className={style.button}>Cancel</button>
       </div>
     </div>
   );
