@@ -1,19 +1,22 @@
-.buttons {
+.text {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80%;
+  flex-direction: column;
+  padding-left: 20%;
+}
   
 
-  .button{
+  .submit{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 30%;
-    margin-top: 15%;
+    width: 80%;
+    margin-top: 5%;
     font-weight: bolder;
     padding-left: 20%;
     color:rgb(123, 186, 29) ;
         
   }
-}
+

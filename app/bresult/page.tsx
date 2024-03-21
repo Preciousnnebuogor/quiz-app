@@ -16,16 +16,19 @@ export default function ResultPage() {
           fontWeight: "bolder",
           color: "rgb(123, 186, 29)",
           marginTop: "5%",
+          marginBottom: "5%"
         }}
       >
         {score}
       </p>
-
-      <h1>Congratulations for completing your quiz test!</h1>
-
-      <div className={style.buttons}>
-        <button>Submit</button>
-        <button className={style.button}>Cancel</button>
+      <div className={style.text}>
+        <h1>Congratulations for completing your quiz test!</h1>
+        
+        <h2>Click below to try again</h2>
+      </div>
+      <div className={style.submit}>
+        <button onClick={()=> {router.push("/category")}}>Try Again</button>
+    
       </div>
     </div>
   );
